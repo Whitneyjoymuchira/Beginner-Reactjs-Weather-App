@@ -75,8 +75,16 @@ button img {
   width: 45px;
   margin-right: 10px;
 }
-.humidity p,
-.wind p {
+ p .humidity, p.wind {
   font-size: 27px;
   margin: 0;
+}
+
+.error{
+  display: block;
+  text-transform: uppercase;
+ 
+  text-align: center;
+  margin-right: 10px;
+  
 }
