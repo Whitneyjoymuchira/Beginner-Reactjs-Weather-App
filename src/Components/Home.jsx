@@ -31,7 +31,8 @@ function Home() {
         .get(apiUrl)
         .then((res) => res)
         .then((info) => {
-          let imagePath = "public/Images/sun-g0835252c1_1280.png";
+          console.log(info.data.weather[0].main)
+          let imagePath = "";
           if (info.data.weather[0].main == "Clouds") {
             imagePath = "public/Images/cloud-g0c4cbf8ff_1280.png";
           }
@@ -43,9 +44,10 @@ function Home() {
           }
           if (info.data.weather[0].main == "Mist") {
             imagePath = "public/Images/fog-g01a09fdf4_1280.png";
-          } else {
-            imagePath = "public/Images/sun-g0835252c1_1280.png";
-          }
+          // } else {
+          //   imagePath = "public/Images/sun-g0835252c1_1280.png";
+          //
+         }
           setData({
             ...data,
             celcius: info.data.main.temp,
